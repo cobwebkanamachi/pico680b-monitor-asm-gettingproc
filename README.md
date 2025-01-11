@@ -59,4 +59,15 @@ Procedure to get monitor asm code
    >       Org $00f1
    </PRE>
    ![image](https://github.com/user-attachments/assets/6676d850-a757-4871-ba45-c5cf1d1ac8bf)
-
+   Above two were indeed no need.
+   True error cause were hedead two header line bellow.<PRE>
+   >f9dasm: M6800/1/2/3/8/9 / H6309 Binary/OS9/FLEX9 Disassembler V1.83
+   >Loaded Motorola S file picobug4t.s19</PRE>
+   Edit like this.<PRE>
+   >;f9dasm: M6800/1/2/3/8/9 / H6309 Binary/OS9/FLEX9 Disassembler V1.83
+   >;Loaded Motorola S file picobug4t.s19</PRE>
+9. convert s19 to array with a.awk (on this repo)
+   > $ awk -f a.awk picobug4t.s19 > picobug4t.txt
+10.paste back picobug4t.txt into body of array PICO_BUG on sim680b_rev1.ino.
+11.Build .ino with vscode or your IDE.
+   
