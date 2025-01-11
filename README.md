@@ -13,9 +13,18 @@ Procedure to get monitor asm code
    > :
    > ...};
    you could binary from above code. paste to notepad or favorite editor.
-2. convert binary () to s19 format
-   
    > 0x8E,0x00,0xF1,0x9F,0xF6,0xCE,0x01,0x00,0xDF,0xFA,0x5F,0xD7,0xF3...
    > :
    > 0x01,0x00,0xFB,0xA5,0x01,0x04,0xFB,0x93
+2. Convert binary () to s19 format with mymot.ipynb (on this repo).
+   Paste above binary into array a of mymot.ipynb.
+   then exec mymot.ipynb on google colaboratory.
+   You would get srec on output of the final code pain.
+   > S113FB938E00F19FF6CE0100DFFA5FD7F3D7F27E32
+   > :
+   > S110FFF301010101010100FBA50104FB93C4
+4. paste s19 file to notepad or your favorite edit and save it to the file.
+5. disassemble the above s19 file with f9dasm.
+   https://github.com/Arakula/f9dasm
+   https://github.com/Arakula/f9dasm/releases has windows binary.
    
