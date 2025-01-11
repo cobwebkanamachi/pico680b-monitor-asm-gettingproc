@@ -111,4 +111,6 @@ Procedure to get monitor asm code
 ## 9.paste back picobug4t.txt into body of array PICO_BUG on sim680b_rev1.ino.
 ## 9.Build .ino with vscode or your IDE.
 
+awk script was got https://news.mynavi.jp/article/pebble_in_the_window-133/ , but
+slightly change from -8-3 to -8 -2 :). Thank you.
 Written with [StackEdit](https://stackedit.io/).
