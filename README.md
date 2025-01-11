@@ -33,7 +33,6 @@ Procedure to get monitor asm code
    like this:<PRE>
    C:\Users\user\Downloads>f9dasm -6800 -begin fb93 -end ffff picobug2.s19 > picobug2.asm
    </PRE>
-   
    So, you get assembler source code, but this has several points to mitigate.
 7. Mainly you should mitigate to asm is two points.
 7.1 remove ">" before head of jump labels<PRE>
@@ -59,5 +58,4 @@ Procedure to get monitor asm code
    > 8a13
    >       Org $00f1
    </PRE>
-   
    
