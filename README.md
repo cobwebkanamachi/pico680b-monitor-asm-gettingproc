@@ -1,4 +1,3 @@
-
 # pico680b-monitor-asm-gettingproc
 
 I got the monitor asm code from monitor binary of this repository: https://github.com/simple-circuit/picobug/ .
@@ -38,8 +37,9 @@ Procedure to get monitor asm code
 
    https://github.com/Arakula/f9dasm
    https://github.com/Arakula/f9dasm/releases has windows binary.
-   like this:<PRE>
-   C:\Users\user\Downloads>f9dasm -6800 -begin fb93 -end ffff picobug4t.s19 > picobug4.asm
+   like this:
+   <PRE>
+   C:\Users\user\Downloads>f9dasm -6800 -begin fb93 -end ffff picobug4t.s19 > picobug4t.asm
    </PRE>
    So, you get assembler source code, but this has several points to mitigate.
 
@@ -50,7 +50,8 @@ Procedure to get monitor asm code
 <PRE>
    > $ grep -c ">M" picobug4t.asm
    > 8</PRE>
-   I edit asm code file with vim (ex mode) like this.<PRE>
+   I edit asm code file with vim (ex mode) like this.
+   <PRE>
    > :1,$ s/>M/M/g</PRE>
 
 ## 5.2 put 0 to ",X" (like LDAA ,X to LDAA 0,X)
@@ -58,7 +59,8 @@ Procedure to get monitor asm code
 <PRE>
    > grep -c " ,X" picobug4t.asm
    > 12</PRE>
-   I edit asm code file with vim (ex mode) like this.<PRE>
+   I edit asm code file with vim (ex mode) like this.
+<PRE>
    > :1,$ s/ ,X/ 0,X/g</PRE>
 
 ## 6. assemble asm code
@@ -77,10 +79,12 @@ Procedure to get monitor asm code
    </PRE>
    ![image](https://github.com/user-attachments/assets/6676d850-a757-4871-ba45-c5cf1d1ac8bf)
    Above two were indeed no need.
-   True error cause were hedead two header line bellow.<PRE>
+   True error cause were hedead two header line bellow.
+   <PRE>
    >f9dasm: M6800/1/2/3/8/9 / H6309 Binary/OS9/FLEX9 Disassembler V1.83
    >Loaded Motorola S file picobug4t.s19</PRE>
-   Edit like this.<PRE>
+   Edit like this.
+<PRE>
    >;f9dasm: M6800/1/2/3/8/9 / H6309 Binary/OS9/FLEX9 Disassembler V1.83
    >;Loaded Motorola S file picobug4t.s19</PRE>
 
@@ -93,13 +97,9 @@ Procedure to get monitor asm code
 :1,$ s/^/0x/g</PRE>
 <PRE>
 :1,$ s/ /,0x/g</PRE>
-<PRE>    
+<PRE>
 :1,$ s/0x$//g</PRE>
 ## 9.paste back picobug4t.txt into body of array PICO_BUG on sim680b_rev1.ino.
 ## 9.Build .ino with vscode or your IDE.
 
-
-   
-
-
-> Written with [StackEdit](https://stackedit.io/).
+Written with [StackEdit](https://stackedit.io/).
