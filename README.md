@@ -39,7 +39,7 @@ Procedure to get monitor asm code
    https://github.com/Arakula/f9dasm
    https://github.com/Arakula/f9dasm/releases has windows binary.
    like this:<PRE>
-   C:\Users\user\Downloads>f9dasm -6800 -begin fb93 -end ffff picobug2.s19 > picobug2.asm
+   C:\Users\user\Downloads>f9dasm -6800 -begin fb93 -end ffff picobug4t.s19 > picobug4.asm
    </PRE>
    So, you get assembler source code, but this has several points to mitigate.
 
