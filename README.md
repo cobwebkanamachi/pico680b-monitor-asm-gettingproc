@@ -66,8 +66,8 @@ Procedure to get monitor asm code
    Edit like this.<PRE>
    >;f9dasm: M6800/1/2/3/8/9 / H6309 Binary/OS9/FLEX9 Disassembler V1.83
    >;Loaded Motorola S file picobug4t.s19</PRE>
-9. convert s19 to array with a.awk (on this repo)
-   > $ awk -f a.awk picobug4t.s19 > picobug4t.txt
+9. convert s19 to array with a.awk (on this repo)<PRE>
+   > $ awk -f a.awk picobug4t.s19 > picobug4t.txt</PRE>
 10.paste back picobug4t.txt into body of array PICO_BUG on sim680b_rev1.ino.
 11.Build .ino with vscode or your IDE.
    
