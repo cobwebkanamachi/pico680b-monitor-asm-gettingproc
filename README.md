@@ -2,8 +2,10 @@
 NOTICE: 2025/01/11 17:33
 I got virus warning from windows defender downloading a68's zip from bellow today now.
 https://github.com/glitchwrks/a68/archive/refs/heads/master.zip
-
+with Chrome 131.0.6778.265（Official Build） （64bit）.
+That download was stopped by Chrome automatically, so I did not download. 
 I have no other Virus Scanner of other kind. So I could not test if it was true or false.
+
 But I did bellow with git clone on WSL2 of my env.
 You should use git clone: from https://github.com/glitchwrks/a68.git better.
 
