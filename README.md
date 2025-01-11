@@ -35,7 +35,7 @@ Procedure to get monitor asm code
    </PRE>
    So, you get assembler source code, but this has several points to mitigate.
 7. Mainly you should mitigate to asm is two points.
-7.1 remove <PRE>">"<\PRE> before head of jump labels<PRE>
+7.1 remove <PRE>"\>"<\PRE> before head of jump labels<PRE>
    > $ grep -c ">M" picobug4t.asm
    > 8</PRE>
    I edit asm code file with vim (ex mode) like this.<PRE>
