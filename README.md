@@ -90,8 +90,8 @@ Procedure to get monitor asm code
    > $ awk -f a.awk picobug4t.s19 > picobug4t.txt</PRE>
 
 ## 8.edit picobug4t.txt with vim(ex mode).<PRE>
-:1,$ s/^/0x/g
-:1,$ s/ /,0x/g    
+:1,$ s/^/0x/g</PRE><PRE>
+:1,$ s/ /,0x/g</PRE><PRE>    
 :1,$ s/0x$//g</PRE>
 ## 9.paste back picobug4t.txt into body of array PICO_BUG on sim680b_rev1.ino.
 ## 9.Build .ino with vscode or your IDE.
