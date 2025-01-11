@@ -35,19 +35,19 @@ Procedure to get monitor asm code
    </PRE>
    So, you get assembler source code, but this has several points to mitigate.
 7. Mainly you should mitigate to asm is two points.
-7.1 remove ">" before head of jump labels<PRE>
+7.1 remove <PRE>">"<\PRE> before head of jump labels<PRE>
    > $ grep -c ">M" picobug4t.asm
    > 8</PRE>
-   I edit asm code file with vim (ex mode) like this.
-   > :1,$ s/>M/M/g
+   I edit asm code file with vim (ex mode) like this.<PRE>
+   > :1,$ s/>M/M/g</PRE>
 7.2 put 0 to ",X" (like LDAA ,X to LDAA 0,X)<PRE>
    > grep -c " ,X" picobug4t.asm
    > 12</PRE>
-   I edit asm code file with vim (ex mode) like this.
-   > :1,$ s/ ,X/ 0,X/g
+   I edit asm code file with vim (ex mode) like this.<PRE>
+   > :1,$ s/ ,X/ 0,X/g</PRE>
 8. assemble asm code
    <PRE>
-   > a68 picobug2.asm -l picobug2.lst -s picobug2.s19.2nd
+   > a68 picobug4t.asm -l picobug4t.lst -s picobug4t.s19
    </PRE>
    There were 2 errors still.
    That cause were bellow(picobug3.asm has no error, picobug4t.asm has 2 error for assemble).
